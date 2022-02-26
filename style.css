@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 1600px;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+	
+}
+
+/* Backgrounds */
+
+.background {
+
+    background-image: url(/pictures/android-12-weather-widget-location-needed.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cloudy {
+    background-image: url(pictures/f.gif);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.sunny {
+    background-image: url(pictures/sun-19.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.foggy {
+    background-image: url(pictures/california-sanfran.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rainy {
+    background-image: url(pictures/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+}
+
+/* Cards */
+
+.cards {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.left-card {
+    height: 300px;
+    width: 200px;
+    margin-left: 0.5rem;
+    border: solid #999ca5 2px;
+    border-radius: 7px;
+    box-shadow: #ebeff1 0px 5px 50px 5px;
+	transition: 0.3s ease-in;
+}
+
+.left-card:hover {
+	transform: scale(1.075);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+
+.left-card h1 {
+    font-size: 1.5rem;
+    color: rgb(12, 58, 85);
+	font-weight: bold;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.left-card-up {
+    background-image: url(/pictures/e.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0.7;
+    padding:2rem;
+}
+
+.left-card-down h1 {
+	padding: 2rem;
+	color: #fff;
+}
+
+.card-btn  {
+    background-color: #fff;
+    margin: 3rem 2rem;
+    padding: 1rem;
+    border-radius: 40px;
+    text-align: center;
+    color: #777;
+    font-weight: 700;
+    border: #48436f solid 2px;
+    cursor: pointer;
+}
+
+/* Widget */
+
+.day, .temp, .windDir, .windSpeed, .type {
+    display:flex; 
+}
+
+.widget-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.wind-direction {
+	background-color: rgb(12, 58, 85);
+	width: 400px;
+    height: 350px;
+    padding-right:7rem;
+	border-radius: 20px;
+	opacity: 0.8;
+	position: relative;
+	left: 10rem;
+}
+
+.data {
+	background-color: rgb(12, 58, 85);
+	width: 700px;
+	border-radius: 20px;
+	opacity: 0.8;
+	padding: 2rem;
+	margin:0.5rem 5rem;
+}
+
+.data p {
+	color: rgb(248, 248, 248);
+}
+
+.data-item {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr  ;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	color: rgb(248, 248, 248);
+}
+
+.convert-to-kelvin, .convert-to-kmh {
+	background-color: rgb(12, 58, 85);
+	border:#4781c0 solid 2px;
+	border-radius: 10px;
+	color: rgb(248, 248, 248);
+	font-weight: 700;
+	cursor: pointer;
+	padding: 0.5rem;
+	transition: 0.3s ease-in;
+}
+.convert-to-kelvin:hover, .convert-to-kmh:hover {
+	transform: scale(1.075);
+    transition: 0.3s ease-in;
+}
+
+/* Compass */
+#compass {
+	width: 200px; height: 200px;
+	border-radius: 50%;
+	margin: 0 auto;
+	position: relative;
+	top: 4.5rem;
+	left:4rem;
+	border: 2px solid #777;
+	box-shadow:
+		
+		0 0 1px 8px #ccc,
+		5px 10px 15px #48436f;
+	
+}
+
+#compass span {
+	position: absolute;
+	font-weight: bold;
+}
+
+/* North */
+#compass span:nth-child(1) {
+	left: 95px; top: 20px;
+	color: rgba(244,94,80,1);
+}
+/* South */
+#compass span:nth-child(3) {
+	left: 95px; bottom: 20px;
+	color: rgba(244,94,80,1);
+}
+
+/* East */
+#compass span:nth-child(2) {
+	right: 25px; top: 90px;
+	color: rgba(244,94,80,1);
+}
+/* West */
+#compass span:nth-child(4) {
+	left: 25px; top: 90px;
+	color: rgba(244,94,80,1);
+}
+
+/* Compass Needle */
+
+@keyframes rotate-nw {
+	from { transform: rotate(20deg); }
+	to { transform: rotate(30deg); }
+}
+@keyframes rotate-ne {
+	from { transform: rotate(110deg); }
+	to { transform: rotate(130deg); }
+}
+@keyframes rotate-se {
+	from { transform: rotate(200deg); }
+	to { transform: rotate(220deg); }
+}
+@keyframes rotate-sw {
+	from { transform: rotate(290deg); }
+	to { transform: rotate(310deg); }
+}
+@keyframes rotate-e {
+	from { transform: rotate(160deg); }
+	to { transform: rotate(170deg); }
+}
+@keyframes rotate-s {
+	from { transform: rotate(245deg); }
+	to { transform: rotate(260deg); }
+}
+@keyframes rotate-n {
+	from { transform: rotate(70deg); }
+	to { transform: rotate(85deg); }
+}
+
+
+
+.north-west {
+	width: 60px; height: 30px;
+	position: relative;
+	left: 50%; top: 50%;
+	margin-left: -30px; margin-top: -15px;
+	animation: rotate-nw 2s cubic-bezier(1,.5,.5,1) infinite alternate;
+}
+
+.north-east {
+	width: 60px; height: 30px;
+	position: relative;
+	left: 50%; top: 50%;
+	margin-left: -30px; margin-top: -15px;
+	animation: rotate-ne 2s cubic-bezier(1,.5,.5,1) infinite alternate;
+}
+
+.south-east {
+	width: 60px; height: 30px;
+	position: relative;
+	left: 50%; top: 50%;
+	margin-left: -30px; margin-top: -15px;
+	animation: rotate-se 2s cubic-bezier(1,.5,.5,1) infinite alternate;
+}
+
+.south-west {
+	width: 60px; height: 30px;
+	position: relative;
+	left: 50%; top: 50%;
+	margin-left: -30px; margin-top: -15px;
+	animation: rotate-sw 2s cubic-bezier(1,.5,.5,1) infinite alternate;
+}
+
+.east {
+	width: 60px; height: 30px;
+	position: relative;
+	left: 50%; top: 50%;
+	margin-left: -30px; margin-top: -15px;
+	animation: rotate-e 2s cubic-bezier(1,.5,.5,1) infinite alternate;
+}
+
+.south {
+	width: 60px; height: 30px;
+	position: relative;
+	left: 50%; top: 50%;
+	margin-left: -30px; margin-top: -15px;
+	animation: rotate-s 2s cubic-bezier(1,.5,.5,1) infinite alternate;
+}
+
+.north {
+	width: 60px; height: 30px;
+	position: relative;
+	left: 50%; top: 50%;
+	margin-left: -30px; margin-top: -15px;
+	animation: rotate-n 2s cubic-bezier(1,.5,.5,1) infinite alternate;
+}
+
+#pointer:before {
+	content: '';
+	position: absolute;
+	left: 0; right: 0;
+	top: 0; bottom: 0;
+	background: linear-gradient(
+		-26deg,
+		rgba(216,216,216,1) 51%,
+		rgba(244,94,80,1) 53%
+	);
+	transform: skewX(60deg);
+}
+
+/* Compass button */
+#pointer:after {
+	content: '';
+	width: 10px; height: 10px;
+	background: #4781c0;
+	border-radius: 50%;
+	box-shadow: 0 0 4px 2px #fff;
+	position: absolute;
+	left: 50%; top: 50%;
+	margin-left: -5px; margin-top: -5px;
+}
+
+/* Wind Direction */
+
+
+

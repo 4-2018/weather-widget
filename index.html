@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Widget</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styles-responsive.css">
+</head>
+<body id="bg" class="background">
+
+    <!-- Days Section -->
+
+    <div class="days" id="days">
+        <div class="days-container">
+            <div class="cards">
+
+                <div class="left-card" id="mon">
+                  <div class="left-card-up">
+                    <h1 class="title-day">Monday</h1>
+                  </div>
+      
+                  <div class="left-card-down">
+                    <h1>22 °C</h1>
+                  </div>
+      
+                  
+                </div>
+
+                <div class="left-card" id="tue">
+                    <div class="left-card-up">
+                      <h1 class="title-day">Tuesday</h1>
+                    </div>
+        
+                    <div class="left-card-down">
+                      <h1>14 °C</h1>
+                    </div>
+        
+                    
+                </div>
+
+                <div class="left-card" id="wed">
+                    <div class="left-card-up">
+                      <h1 class="title-day">Wednesday</h1>
+                    </div>
+        
+                    <div class="left-card-down">
+                      <h1>17 °C</h1>
+                    </div>
+        
+                    
+                </div>
+
+                <div class="left-card" id="thu">
+                    <div class="left-card-up">
+                      <h1 class="title-day">Thursday</h1>
+                    </div>
+        
+                    <div class="left-card-down">
+                      <h1>27 °C</h1>
+                    </div>
+        
+                    
+                </div>
+
+                <div class="left-card" id="fri">
+                    <div class="left-card-up">
+                      <h1 class="title-day">Friday</h1>
+                    </div>
+        
+                    <div class="left-card-down">
+                      <h1>30 °C</h1>
+                    </div>
+        
+                    
+                </div>
+
+                <div class="left-card" id="sat">
+                    <div class="left-card-up">
+                      <h1 class="title-day">Saturday</h1>
+                    </div>
+        
+                    <div class="left-card-down">
+                      <h1>26 °C</h1>
+                    </div>
+        
+                    
+                </div>
+
+                <div class="left-card" id="sun">
+                    <div class="left-card-up">
+                      <h1 class="title-day">Sunday</h1>
+                    </div>
+        
+                    <div class="left-card-down">
+                      <h1>19 °C</h1>
+                    </div>
+        
+                    
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- Widget Section -->
+
+    <div class="widget" id="widget">
+        <div class="widget-container">
+            <div class="data ">
+                <div class="day data-item">
+                    <h4>Day:&nbsp;</h4> <p id="day"> - </p>
+                </div>
+
+                <div class="temp data-item">
+                    <h4>Temperature:&nbsp;</h4> <p id="temp">0 °C</p> <button id="kelvin" class="convert-to-kelvin">Convert to Kelvin (K) - °C</button>
+                </div>
+
+                <div class="windDir data-item">
+                    <h4>Wind Direction:&nbsp;</h4> <p id="windDir"> - </p>
+                </div>
+
+                <div class="windSpeed data-item">
+                    <h4>Wind Speed:&nbsp;</h4> <p id="windSpeed">0 m/s</p> <button id="kmh" class="convert-to-kmh">Convert to km/h - m/s</button>
+                </div>
+                <div class="type data-item">
+                    <h4>Type:&nbsp;</h4> <p id="type"> - </p>
+                </div>
+
+                <p>* Double click on button to return to previos unit. <br> * Red part of compass needle shows wind direction.</p>
+            </div>
+
+            <div class="wind-direction">
+                <div id="compass">
+                    <span>N</span>
+                    <span>E</span>
+                    <span>S</span>
+                    <span>W</span>
+                    <div id="pointer"  class="north-west"></div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/index.js"></script>
+</body>
+</html>
